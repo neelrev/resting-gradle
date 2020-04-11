@@ -172,13 +172,13 @@ public class JSONTransformer<T> implements Transformer<T, ServiceResponse> {
 						dests = new ArrayList<T>(arrayLength);
 						for (int i = 0; i < arrayLength; i++) {
 							jsonObject = responseArray.getJSONObject(i);
-							entity=createEntity(jsonObject.toString(), targetType);
+							entity=(T) createEntity(jsonObject.toString(), targetType);
 							dests.add(entity);
 						}
 						destMap.put(singleAlias, dests);
 					} else {
 						dests = new ArrayList(1);
-						entity=createEntity(((JSONObject) aliasedObject).toString(), targetType);
+						entity=(T) createEntity(((JSONObject) aliasedObject).toString(), targetType);
 						dests.add(entity);
 						destMap.put(singleAlias, dests);
 					}// if
