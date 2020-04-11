@@ -38,7 +38,7 @@ dependencies {
     implementation 'org.apache.httpcomponents:httpclient:4.2.1'
     implementation 'org.apache.httpcomponents:httpcore:4.2.2'
     implementation ('org.jdom:jdom:1.1.2') {
-     exclude(group: 'jdom', module: 'jdom')  
+     exclude(group: 'jaxen', module: 'jaxen')  
     }
     implementation 'org.yaml:snakeyaml:1.9'
     implementation 'com.thoughtworks.xstream:xstream:1.3.1'
